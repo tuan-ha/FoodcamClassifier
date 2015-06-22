@@ -31,7 +31,7 @@ int main(int argc, char** argv_) {
 			 Ptr<DescriptorExtractor>(new SurfDescriptorExtractor())
 			 )
 		);
-	Ptr<DescriptorMatcher > matcher(new BruteForceMatcher<L2<float> >());
+	Ptr<DescriptorMatcher > matcher(new BFMatcher());
 	BOWImgDescriptorExtractor bowide(extractor,matcher);
 	bowide.setVocabulary(vocabulary);
 	

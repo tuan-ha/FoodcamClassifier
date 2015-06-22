@@ -15,7 +15,7 @@ FoodcamPredictor::FoodcamPredictor() {
 	initColors();
 	initVocabulary();
 	Ptr<FeatureDetector > _detector(new SurfFeatureDetector());
-	Ptr<DescriptorMatcher > _matcher(new BruteForceMatcher<L2<float> >());
+	Ptr<DescriptorMatcher > _matcher(new BFMatcher());
 	Ptr<DescriptorExtractor > _extractor(new OpponentColorDescriptorExtractor(Ptr<DescriptorExtractor>(new SurfDescriptorExtractor())));
 	matcher = _matcher;
 	detector = _detector;

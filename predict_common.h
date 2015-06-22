@@ -12,17 +12,23 @@
 #include <stdlib.h>
 
 #include <opencv2/opencv.hpp>
+#include <opencv2/nonfree/features2d.hpp>
 #include <fstream>
 #include <iostream>
 #include <string>
 #include <set>
 
 #include <dirent.h>
+#ifdef _WIN32
+#include <io.h>
+#else
 #include <unistd.h>
+#endif
 #include <sys/stat.h>
 #include <sys/types.h>
 
 #include <omp.h>
+#include <memory>
 
 using namespace cv;
 using namespace std;
