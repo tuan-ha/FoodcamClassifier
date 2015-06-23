@@ -54,7 +54,7 @@ void FoodcamPredictor::initSVMs() {
 		{
 			string class_ = filepath.substr(filepath.rfind('_')+1,filepath.rfind('.')-filepath.rfind('_')-1);
 			if (debug) cout << "load " << filepath << ", class: " << class_ << endl;
-			classes_classifiers.insert(pair<string,CvSVM>(class_,CvSVM()));
+			//classes_classifiers.insert(pair<string,CvSVM>(class_,CvSVM()));
 			classes_classifiers[class_].load(filepath.c_str());
 		}
 	}
